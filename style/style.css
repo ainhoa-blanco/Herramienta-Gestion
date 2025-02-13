@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2f2f2f;
+    margin: 0;
+    justify-content: center;
+}
+
+#body-index {
+    align-items: center;
+    display: flex;
+}
+
+.pantalla-formulari {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#titol-animat {
+    margin-top: 7%;
+}
+
+.pantalla-principal {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#imatge-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 6rem;
+    width: auto;
+}
+
+.general {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TÍTOL PRINCIPAL */
+.contenidor-titol {
+    display: flex;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff66b3;
+    margin-bottom: 1.25rem; 
+    justify-content: center;
+}
+
+
+/* ANIMACIÓ DE LES LLETRES DEL TÍTOL */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translate(calc(var(--x) * 6rem - 2.5rem), 
+            calc(var(--y) * 6rem - 2.5rem));
+    animation: moureLletres 1s ease forwards;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+@keyframes moureLletres {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* ESTILS GENERALS DELS BOTONS */
+.btn {
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); 
+    padding: 0.625rem 1.25rem;
+    margin: 0 0.625rem; 
+}
+
+
+/* BOTÓ INICI SESSIÓ */
+.boto-loggin {
+    background-color: #f6f930;
+    transition: background-color 0.3s;
+}
+
+.boto-loggin:hover {
+    background-color: #f6f930cc;
+}
+
+/* BOTÓ REGISTRAR-SE */
+.boto-register {
+    background-color: #f6f930;
+    transition: background-color 0.3s;
+}
+
+.boto-register:hover {
+    background-color: #f6f930cc;
+}
+
+/* ESTILS GENERALS FORMULARI INICIAR SESSIÓ I REGISTRAR-SE */
+.formulari-container {
+    background-color: #BBE6E4;
+    border: 0.125rem solid #80c9c7;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    max-width: 25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+/* TITULO DEL FORMULARIO */
+.formulari-container h2 {
+    text-align: center;
+    padding-bottom: 1.25rem;
+    color: #2f2f2f;
+}
+
+/* ETIQUETAS */
+.formulari-label {
+    color: #2f2f2f;
+}
+
+
+.formulari-control {
+    background-color: #d6f3f2;
+    border: 1px solid #80c9c7;
+    color: #2f2f2f;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.9375rem;
+}
+
+/* ESTILO DE LOS BOTONES DEL FORMULARIO */
+.btn.boto-loggin-pg,
+.btn.boto-register-pg {
+    display: block;
+    margin: 0 auto;
+    background-color: #80c9c7;
+    color: #ffffff;
+    border: none;
+    padding: 0.625rem 0.9375rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border-radius: 0.3125rem;
+}
+
+/* HOVER DE LOS BOTONES */
+.btn.boto-loggin-pg:hover,
+.btn.boto-register-pg:hover {
+    background-color: #6ab0ae;
+}
+
+/* Botón añadir proyecto */
+.nou-projecte {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+#afegir-projecte {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff66b3;
+    transition: color 0.3s ease;
+    width: 17.5rem;
+    height: 31.25rem;
+}
+
+#afegir-projecte:hover {
+    color: #ff3a99;
+}
+
+/* PROJECTES*/
+.projectes {
+    background-color: #bbe6e4d2;
+    border-radius: 0.5rem;
+    width: 90%;
+    margin: 3% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.projecte, .nou-projecte {
+    background-color: #BBE6E4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 17.5rem;
+    height: 38rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1.25rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projecte:hover {
+    transform: translateY(-0.3125rem); /* 5px */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.p-data-inici, .p-data-fi, 
+.p-nom-projecte, 
+.p-descripcio-projecte, 
+.p-estat, 
+.p-encarregat, 
+.p-nom-tasca,
+.p-encarregat, 
+.p-descripcio-tasca{
+    font-size: 1rem;
+    color: #2f2f2f;
+    margin-top: 0px;
+}
+
+.nom-projecte,
+.descripcio-projecte,
+.data-inici,
+.data-fi,
+.colaboradors,
+.estat-tasca,
+.buscar-colaboradors,
+.buscar-encarregat {
+    background-color: #f4f9f9;
+    border: 0.06rem solid #80c9c7;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #2f2f2f;
+}
+
+/* Botons */
+.btn-guardar, .btn-actualitzar {
+    background-color: #f6f930;
+    color: black;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+    color: black;
+    background-color: transparent;
+    border: solid 0.0625rem #ff3a99;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover{
+    background-color: #ff3a991a;
+}
+
+.btn-guardar:hover, .btn-actualitzar:hover {
+    background-color: #f6f930cc;
+}
+
+.btn-entrar {
+    background-color: #f6f9309f;
+    color: f6f930;
+    border: none;
+    margin-top: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    width: 90%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-entrar:hover{
+    background-color: #f6f930;
+}
+
+.btn-tancar, .btn-eliminarProjecte {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+}
+
+.btn-tancar, .btn-eliminar, .btn-eliminarProjecte, .btn-tancar-tasca, .btn-eliminarTasca {
+    background-color: #ff66b3ea;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-tancar-tasca {
+    margin-bottom: 0.1875rem;
+}
+
+.btn-tancar:hover, .btn-eliminar:hover, .btn-eliminarProjecte:hover, .btn-tancar-tasca:hover, .btn-eliminarTasca:hover {
+    background-color: #ff66b3;
+    transform: scale(1.1);
+}
+
+.nom-projecte-guardat {
+    color: #ff66b3;
+    font-size: 30px;
+}
+
+.error-message{
+    color: red;
+    padding-top: 10px;
+}
+
+#body-tasques {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#form-tasca-container{
+    width: 50%;
+}
+
+.titol-columna {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #ff66b3;
+}
+
+.tasques {
+    border-radius: 0.625rem;
+    background-color: #bbe6e4d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 1.25rem;
+    margin-bottom: 3.125rem;
+}
+
+.nova-tasca {
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    background-color: #BBE6E4;
+    width: 90%;
+    border-radius: 0.625rem;
+    text-align: center;
+}
+
+#afegir-tasca {
+    height: 3.75rem;
+    width: 100%;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff66b3;
+    transition: color 0.3s ease;
+}
+
+#afegir-tasca:hover {
+    color: #ff3a99;
+}
+
+.columnes-tasques {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.columna {
+    flex: 1;
+    background-color: #BBE6E4;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.tasca {
+    margin: 0.625rem;
+    border: 0.06rem solid #ff66b3;
+    color: #2f2f2f;
+    border-radius: 0.3125rem;
+    padding: 0.625rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 0.625rem;
+}
+
+.tasca:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.625rem;
+}
+
+#logout-button, #back-button {
+    margin-top: 2.5rem;
+    margin-right: 2.5rem;
+    background-color: #f6f930;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.625rem 0.9375rem;
+    font-size: 0.875rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+}
+
+#back-button {
+    margin-right: 0.625rem;
+    text-decoration: none;
+}
+
+#logout-button:hover, #back-button:hover {
+    background-color: #f6f930d0;
+}
+
+@media (max-width: 768px) {
+    .projectes {
+        width: 80%;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .projecte, .nou-projecte {
+        width: 15rem;
+        height: 28rem;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+    }
+
+    #afegir-projecte {
+        width: 15rem;
+        height: 25rem;
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-guardar, .btn-actualitzar, .btn-editar {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .btn-entrar {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .p-data-inici, .p-data-fi, 
+    .p-nom-projecte, 
+    .p-descripcio-projecte, 
+    .p-estat, 
+    .p-encarregat, 
+    .p-nom-tasca,
+    .p-encarregat, 
+    .p-descripcio-tasca {
+        font-size: 0.875rem;
+    }
+
+    .nom-projecte,
+    .descripcio-projecte,
+    .data-inici,
+    .data-fi,
+    .colaboradors,
+    .estat-tasca,
+    .buscar-colaboradors,
+    .buscar-encarregat {
+        padding: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .tasques {
+        width: 90%;
+        padding: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .nova-tasca {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        width: 95%;
+    }
+
+    #afegir-tasca {
+        height: 3rem;
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    .columnes-tasques {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .columna {
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+    }
+
+    .tasca {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    #header {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 1rem;
+    }
+
+    #logout-button {
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+
+    #back-button {
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    #header { 
+        display: flex; 
+        flex-direction: column-reverse; 
+        /* Invierte el orden de los botones */ 
+    }
+}
