@@ -41,7 +41,7 @@ Herramienta de gestión que permite crear y modificar proyectos, añadiendo usua
 
 3. Desplegar la aplicación en tu entorno local o servidor.
 
-## Autores
+## Autor
 Desarrollado por Ainhoa Blanco
 
 ## Licencia
