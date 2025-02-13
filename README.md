@@ -1,4 +1,5 @@
 # Herramienta de gestión de proyectos
+Herramienta de gestión que permite crear y modificar proyectos, añadiendo usuarios registrados para que participen en ellos. Dentro de cada proyecto, es posible asignar tareas específicas a los miembros correspondientes.
 
 ## Objetivos del Proyecto
 
